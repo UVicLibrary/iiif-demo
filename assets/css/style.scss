@@ -19,6 +19,15 @@ header h2 {
   color: #6d6d6d;
 }
 
+ol {
+  margin-left: 2rem;
+  margin-top: 1rem;
+}
+
+ol li {
+  margin-bottom: 0.5rem;
+}
+
 /* Navbar CSS adapted from
 https://dev.to/supanthapaul/create-a-simple-navbar-with-7-lines-of-css-4h7f
  */
@@ -48,3 +57,18 @@ nav ul li a:hover {
   text-decoration: underline;
 }
 
+/*
+  Extra small devices (phones, 600px and down)
+*/
+@media only screen and (max-width: 600px) {
+  nav {
+    flex-direction: column;
+  }
+  nav ul {
+    flex-direction: column;
+    padding-top: 0.5rem;
+  }
+  nav li {
+    padding: 0.5rem 0;
+  }
+}
