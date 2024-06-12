@@ -3,6 +3,19 @@
 
 @import "{{ site.theme }}";
 
+body {
+  color: #4A4A4A;
+}
+
+h1 {
+  color: #6d6d6d;
+}
+
+h3 {
+  color: #303030d4;
+  margin-top: 1rem;
+}
+
 header h1, a {
   color: #C63527;
 }
@@ -26,6 +39,10 @@ ol {
 
 ol li {
   margin-bottom: 0.5rem;
+}
+
+footer {
+  color: #333;
 }
 
 /* Navbar CSS adapted from

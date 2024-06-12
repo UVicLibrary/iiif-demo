@@ -11,8 +11,21 @@ description: Using IIIF to access the Libraries' image collections
 </head>
 <body>
 <h1>About</h1>
-<p>This website with different examples of how to leverage IIIF to access the University of Victoria ("UVic") Libraries' image collections. The Libraries currently manage two platforms that support IIIF: <a href="https://vault.library.uvic.ca" target="_blank">Vault</a> and <a href="https://exhibits.library.uvic.ca" target="_blank">Spotlight</a>(digital exhibits).</p>
+<p>This website with different examples of how to leverage IIIF to access the University of Victoria ("UVic") Libraries' image collections. The Libraries currently manage two platforms that support IIIF: <a href="https://vault.library.uvic.ca" target="_blank">Vault</a> and <a href="https://exhibits.library.uvic.ca" target="_blank">Spotlight</a> (digital exhibits).</p>
 <p>Examples for each platform are listed on separate pages (linked above). The "Image Requests" page contains general instructions that can be applied to any IIIF image, although examples are taken from UVic platforms.</p>
+
 <h1>Glossary</h1>
+
+<h3>IIIF (“triple eye eff”): International Image Interoperability Framework</h3>
+
+IIIF is an open (web) standard for sharing and displaying images, which is used by libraries and other cultural institutions around the world. In practical terms, IIIF is a series of APIs that allow one web server or application to request an image – or derivatives of that image (e.g. thumbnail, image tiles) – for display without needing to ingest that content into local storage. IIIF is commonly used by cultural heritage organizations to power viewers for browsing images.
+
+<h3>(IIIF) Manifest</h3>
+
+A JSON document that includes some descriptive metadata about an image (width, height), as well as a unique identifier/web address for the image itself. A deep-zoom image viewer (such as Mirador or Universal Viewer) needs access to a manifest to display the image described within. Once it has access to the manifest, the viewer will request all the derivatives necessary to be able to zoom, pan, etc.
+
+<h3>JSON (JavaScript Object Notation)</h3>
+
+A open standard data format that is one of the most commonly-exchanged formats on the web. Although originally derived from JavaScript, JSON's popularity has endured because it is language-independent or language-agnostic. Almost all modern programming languages can parse and manipulate JSON.
 </body>
 </html>
