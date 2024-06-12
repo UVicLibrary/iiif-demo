@@ -1,0 +1,12 @@
+pages_list_title: Pages on this website
+pages:
+  - title: About
+    url: index.html
+  - title: Glossary
+    url: index.html#glossary
+  - title: Vault
+    url: vault.html
+  - title: Spotlight
+    url: spotlight.html
+  - title: Image Requests
+    url: image-requests.html

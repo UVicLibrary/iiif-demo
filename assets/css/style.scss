@@ -1,0 +1,50 @@
+---
+---
+
+@import "{{ site.theme }}";
+
+header h1, a {
+  color: #C63527;
+}
+
+a {
+  text-decoration: underline;
+}
+
+a:hover {
+  color: #91281d;
+}
+
+header h2 {
+  color: #6d6d6d;
+}
+
+/* Navbar CSS adapted from
+https://dev.to/supanthapaul/create-a-simple-navbar-with-7-lines-of-css-4h7f
+ */
+
+nav {
+  display: flex;
+  justify-content: space-between;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+}
+
+nav ul li {
+  list-style: none;
+  padding-left: 1rem;
+}
+
+nav ul li a {
+  font-family: 'Chivo', 'Helvetica Neue', Helvetica, Arial;
+  font-size: 18px;
+  text-decoration: none;
+}
+
+nav ul li a:hover {
+  text-decoration: underline;
+}
+
