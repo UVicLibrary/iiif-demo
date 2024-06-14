@@ -11,7 +11,7 @@ description: Requesting & displaying images using the IIIF Image API
 <ol>
     <li>Go to the object's manifest page. We'll use <a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474/manifest.json" target="_blank">this Vault manifest</a> as the example for the rest of this tutorial.</li>
     <li>Scroll through the manifest until you reach the "canvases" section. From here, you'll need to find the canvas that corresponds to the image you're looking for. Depending on the IIIF viewer you're using, it may be faster to search the canvases by title rather than by counting X no. of images from the start.</li>
-    <li>From the canvas, follow the manifest down to images > resource > service > @id. This should be a URL (that also contains as the unique identifier for this particular image). For our example, this @id is <a href="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f" target="_blank">https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f</a>. (Note that if you were actually to visit this link, you would get the info.json response for that image.)</li>
+    <li>From the canvas, follow the manifest down to images, then resource, then service, then the @id attribute. This should be a URL (that also contains as the unique identifier for this particular image). For our example, this @id is <a href="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f" target="_blank">https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f</a>. (Note that if you were actually to visit this link, you would get the info.json response for that image.)</li>
 
     <figure>
         <div class="highlight">
@@ -75,3 +75,11 @@ description: Requesting & displaying images using the IIIF Image API
         <p>The official IIIF documentation contains <a href="https://iiif.io/api/image/2.1/#size" target="_blank">more visual examples of requests</a> and their results.</p>
     </li>
 </ol>
+
+<h1><a name="region">Specific region or area of an image</a></h1>
+
+<p>To display a specific part or region of an image without IIIF, we would need to download the full image and crop the image manually. However, if we want to display the image on the web using IIIF, we can use the Image API to request/display a specific region or area of the image.</p>
+
+<p>As an example, we'll use the following <a href="https://exhibits.library.uvic.ca/spotlight/library-publications/catalog/9-14462" target="_blank">image of Robin Hopper's nickel glaze tests</a>, which is featured in UVic's Spotlight exhibit, <em><a href="https://exhibits.library.uvic.ca/spotlight/library-publications" target="_blank">University of Victoria Libraries Publication Series</a></em>.</p>
+
+<img src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/full/,600/0/default.jpg" alt="A series of multi-coloured ceramic tiles laid out in a 5 by 6 grid." />
