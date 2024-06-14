@@ -8,5 +8,7 @@ pages:
     url: vault.html
   - title: Spotlight
     url: spotlight.html
-  - title: Image Requests
-    url: image-requests.html
+  - title: Image API
+    url: image-api.html
+  - title: Image URL Generator
+    url: generator.html
