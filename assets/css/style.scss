@@ -73,14 +73,25 @@ div.flex-box {
   margin-top: auto;
 }
 
-span.size-request {
+span.image-request {
   display: block;
   text-align: center;
+}
+
+img.centre-image {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 img.size-example {
   display: block;
   margin: 5px auto 5px auto;
+}
+
+img.region-example {
+  display: block;
+  margin: 5px auto 20px auto;
 }
 
 .size-figure figcaption {

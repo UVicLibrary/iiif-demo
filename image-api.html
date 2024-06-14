@@ -9,7 +9,7 @@ description: Requesting & displaying images using the IIIF Image API
 <p>The steps for manually requesting a resized image (given the IIIF manifest) are listed below. Although we use Vault as an example, the same instructions will work for any manifest that is backed by a IIIF image server and is level 1 or level 2 compliant (<a href="https://iiif.io/api/image/3.0/compliance/" target="_blank">more on levels of Image API compliance</a>).</p>
 
 <ol>
-    <li>Go to the object's manifest page. We'll use <a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474/manifest.json" target="_blank">this Vault manifest</a> as the example for the rest of this tutorial.</li>
+    <li>Go to the object's manifest page (see <a href="https://uviclibrary.github.io/IIIFDemo/vault.html" target="_blank" >detailed instructions for finding a Vault manifest</a>). We'll use <a href="https://vault.library.uvic.ca/concern/generic_works/1a597e67-17a8-4c97-9c63-c835a41f5474/manifest.json" target="_blank">this Vault manifest</a> as the example for the rest of this tutorial.</li>
     <li>Scroll through the manifest until you reach the "canvases" section. From here, you'll need to find the canvas that corresponds to the image you're looking for. Depending on the IIIF viewer you're using, it may be faster to search the canvases by title rather than by counting X no. of images from the start.</li>
     <li>From the canvas, follow the manifest down to images, then resource, then service, then the @id attribute. This should be a URL (that also contains as the unique identifier for this particular image). For our example, this @id is <a href="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f" target="_blank">https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f</a>. (Note that if you were actually to visit this link, you would get the info.json response for that image.)</li>
 
@@ -51,21 +51,21 @@ description: Requesting & displaying images using the IIIF Image API
         <p>As another example, for a <a href="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/150,/0/default.jpg" target="_blank">thumbnail of the full image that is 150px wide</a>, we would add "/full/150,/0/default.jpg" to the end instead. Some more examples of image requests are below:</p>
         <div class="flex-container">
             <div class="flex-box">
-                <span class="size-request">Request:<br/><strong>/full/,100/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/,100/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/,100/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. The image is a small thumbnail of an illustrated letter from the William Orpen collection in Vault." />
                     <figcaption>Result: <strong>61px by 100px</strong></figcaption>
                 </figure>
             </div>
             <div class="flex-box">
-                <span class="size-request">Request:<br/><strong>/full/200,200/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/200,200/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/200,200/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. Because the width and height in the request do not match the aspect ratio of the original, full image, the result looks squashed vertically. The image is an illustrated letter from the William Orpen collection in Vault." />
                     <figcaption>Result: <strong>200px by 200px</strong></figcaption>
                 </figure>
             </div>
             <div class="flex-box">
-                <span class="size-request">Request:<br/><strong>/full/!300,600/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/!300,600/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/!300,600/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. Since the dimensions are expressed as maximum values (300 pixels by 600 pixels), the image retains its original aspect ratio and fills the indicated space without overflowing. The image is an illustrated letter from the William Orpen collection in Vault."/>
                     <figcaption>Result: <strong>300px by 493px</strong></figcaption>
@@ -76,10 +76,30 @@ description: Requesting & displaying images using the IIIF Image API
     </li>
 </ol>
 
-<h1><a name="region">Specific region or area of an image</a></h1>
+<h1><a name="region">Specific region or area of an image (crop)</a></h1>
 
 <p>To display a specific part or region of an image without IIIF, we would need to download the full image and crop the image manually. However, if we want to display the image on the web using IIIF, we can use the Image API to request/display a specific region or area of the image.</p>
 
 <p>As an example, we'll use the following <a href="https://exhibits.library.uvic.ca/spotlight/library-publications/catalog/9-14462" target="_blank">image of Robin Hopper's nickel glaze tests</a>, which is featured in UVic's Spotlight exhibit, <em><a href="https://exhibits.library.uvic.ca/spotlight/library-publications" target="_blank">University of Victoria Libraries Publication Series</a></em>.</p>
 
-<img src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/full/,600/0/default.jpg" alt="A series of multi-coloured ceramic tiles laid out in a 5 by 6 grid." />
+<img class="centre-image" src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/full/,600/0/default.jpg" alt="A series of multi-coloured ceramic tiles laid out in a 5 by 6 grid." />
+
+<ol>
+    <li>Find the item's manifest page (see <a href="https://uviclibrary.github.io/IIIFDemo/spotlight.html" target="_blank" >detailed instructions for finding a Spotlight manifest</a>).</li>
+    <li>Follow <a href="#size" >steps 2-4 for the previous section above</a> to get the @id attribute of the web service. For our example, this @id is https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4.</li>
+    <li>Use <a href="https://iiif.io/api/image/2.1/#region" target="_blank">the region parameter</a> to specify the region of the image that you want. For example, we could get the first two rows of tiles by appending the following request to the @id attribute:</li>
+</ol>
+<figure>
+    <div class="flex-container">
+        <div class="flex-box">
+            <span class="image-request"><strong>/0,0,2176,1000/!600,400/0/default.jpg</strong></span>
+            <img class="region-example" src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/0,0,2176,1000/!600,400/0/default.jpg" alt="An image showing the first two rows of tiles from the grid described in the previous image." />
+            <figcaption>Human translation of the request: "Give me an image that is 600 pixels wide by 400 pixels tall (maximum). The image should consist of the first 2176 pixels of the original, counting from the image's left edge, and the first 1000 pixels counting from the top edge."</figcaption>
+        </div>
+    </div>
+</figure>
+<br/>
+
+<p>Note that the region is defined in reference to the full image, which is 2176 px by 2906 px, and not in reference to the size of the image that you're ultimately requesting. The max dimensions of the image are defined in the resource section of a manifest, or in the info.json for an image resource.</p>
+
+<p>We could also use the "square" keyword to "crop" the image to a specific tile...</p>
