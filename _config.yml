@@ -29,8 +29,8 @@ url: # the base hostname & protocol for your site, e.g. http://example.com
 # Build settings
 theme: jekyll-theme-tactile
 #remote_theme: pages-themes/tactile
-plugins:
-   - jekyll-remote-theme
+#plugins:
+#   - jekyll-remote-theme
 #  - jekyll-feed
 
 # Exclude from processing.
