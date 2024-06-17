@@ -10,5 +10,5 @@ pages:
     url: spotlight.html
   - title: Image API
     url: image-api.html
-  - title: Image URL Generator
-    url: generator.html
+#  - title: Image URL Generator
+#    url: generator.html
