@@ -51,21 +51,21 @@ description: Requesting & displaying images using the IIIF Image API
         <p>As another example, for a <a href="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/150,/0/default.jpg" target="_blank">thumbnail of the full image that is 150px wide</a>, we would add "/full/150,/0/default.jpg" to the end instead. Some more examples of image requests are below:</p>
         <div class="flex-container">
             <div class="flex-box">
-                <span class="image-request">Request:<br/><strong>/full/,100/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/<span class="red-text">,100</span>/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/,100/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. The image is a small thumbnail of an illustrated letter from the William Orpen collection in Vault." />
                     <figcaption>Result: <strong>61px by 100px</strong></figcaption>
                 </figure>
             </div>
             <div class="flex-box">
-                <span class="image-request">Request:<br/><strong>/full/200,200/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/<span class="red-text">200,200</span>/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/200,200/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. Because the width and height in the request do not match the aspect ratio of the original, full image, the result looks squashed vertically. The image is an illustrated letter from the William Orpen collection in Vault." />
                     <figcaption>Result: <strong>200px by 200px</strong></figcaption>
                 </figure>
             </div>
             <div class="flex-box">
-                <span class="image-request">Request:<br/><strong>/full/!300,600/0/default.jpg</strong></span>
+                <span class="image-request">Request:<br/><strong>/full/<span class="red-text">!300,600</span>/0/default.jpg</strong></span>
                 <figure class="size-figure">
                     <img class="size-example" src="https://vault.library.uvic.ca/images/0a4d3d9f-210a-47be-b89d-a627ea4c570f%252Ffiles%252Fde77c7a9-77fb-4d9e-aa54-87b51b16fd1f/full/!300,600/0/default.jpg" alt="The image file that would be returned by the stated request to the Image API. Since the dimensions are expressed as maximum values (300 pixels by 600 pixels), the image retains its original aspect ratio and fills the indicated space without overflowing. The image is an illustrated letter from the William Orpen collection in Vault."/>
                     <figcaption>Result: <strong>300px by 493px</strong></figcaption>
@@ -94,12 +94,44 @@ description: Requesting & displaying images using the IIIF Image API
         <div class="flex-box">
             <span class="image-request"><strong>/0,0,2176,1000/!600,400/0/default.jpg</strong></span>
             <img class="region-example" src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/0,0,2176,1000/!600,400/0/default.jpg" alt="An image showing the first two rows of tiles from the grid described in the previous image." />
-            <figcaption>Human translation of the request: "Give me an image that is 600 pixels wide by 400 pixels tall (maximum). The image should consist of the first 2176 pixels of the original, counting from the image's left edge, and the first 1000 pixels counting from the top edge."</figcaption>
+            <figcaption>Human translation of the request: "Give me an image that is 600 pixels wide by 400 pixels tall (maximum). It should be an area that is 2176 x 1000 pixels of the original image, counting from the top left corner (0 pixels from the left edge, 0 pixels from the top edge)."</figcaption>
         </div>
     </div>
 </figure>
 <br/>
 
-<p>Note that the region is defined in reference to the full image, which is 2176 px by 2906 px, and not in reference to the size of the image that you're ultimately requesting. The max dimensions of the image are defined in the resource section of a manifest, or in the info.json for an image resource.</p>
+<p>Note that the region is defined in reference to the full image (2176 px wide by 2906 px high), and not in reference to the size of the image that you're ultimately requesting. The max dimensions of the image are defined in the resource section of a manifest, or in the info.json for an image resource. The IIIF documentation contains a more <a href="https://iiif.io/api/image/2.1/#region" target="_blank">detailed diagram of how the region is calculated</a>.</p>
 
-<p>We could also use the "square" keyword to "crop" the image to a specific tile...</p>
+<p>Here are 3 more examples of image requests that use the region parameter to "crop" a specific tile:</p>
+<div class="flex-container">
+    <div class="flex-box">
+        <span class="image-request">
+         Request:<br/>
+            <strong>
+                /<span class="red-text">1290,2350,200,200</span>
+                <br/>/!200,200/0/default.jpg
+            </strong>
+        </span>
+        <img src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/1290,2350,400,400/!200,200/0/default.jpg" />
+    </div>
+    <div class="flex-box">
+        <span class="image-request">
+         Request:<br/>
+            <strong>
+                /<span class="red-text">900,1900,400,400</span>
+                <br/>/!200,200/0/default.jpg
+            </strong>
+        </span>
+        <img src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/900,1900,400,400/!200,200/0/default.jpg" />
+    </div>
+    <div class="flex-box">
+        <span class="image-request">
+         Request:<br/>
+            <strong>
+                /<span class="red-text">500,1450,400,400</span>
+                <br/>/!200,200/0/default.jpg
+            </strong>
+        </span>
+        <img src="https://exhibits.library.uvic.ca/images/14862-24c186a1fac33deb92d0dbed4239cac4/500,1450,400,400/!200,200/0/default.jpg" />
+    </div>
+</div>
