@@ -3,7 +3,7 @@ layout: default
 title: Image API
 description: Requesting & displaying images using the IIIF Image API
 ---
-<h1><a name="size">Images of different sizes or dimensions</a></h1>
+<h1><a name="size">Resizing images using IIIF</a></h1>
 <p>To resize a web image without IIIF, we would need to download the file and open it in a separate software program, such as Adobe Photoshop or Microsoft Paint, then resize it and save the resulting image as a separate file. However, if we want to display the image on the web using IIIF, we don't need to create a separate derivative file. Instead, we can request the size we want using the <a href="https://iiif.io/api/image/2.1/" target="_blank">IIIF Image API</a>, and the image server will respond with the resized image.</p>
 
 <p>The steps for manually requesting a resized image (given the IIIF manifest) are listed below. Although we use Vault as an example, the same instructions will work for any manifest that is backed by a IIIF image server and is level 1 or level 2 compliant (<a href="https://iiif.io/api/image/3.0/compliance/" target="_blank">more on levels of Image API compliance</a>).</p>
@@ -76,9 +76,9 @@ description: Requesting & displaying images using the IIIF Image API
     </li>
 </ol>
 
-<h1><a name="region">Specific region or area of an image (crop)</a></h1>
+<h1><a name="region">"Cropping" images using IIIF</a></h1>
 
-<p>To display a specific part or region of an image without IIIF, we would need to download the full image and crop the image manually. However, if we want to display the image on the web using IIIF, we can use the Image API to request/display a specific region or area of the image.</p>
+<p>To display a specific part or region of an image without IIIF, we would need to download the full image, crop the image manually, and save a new copy. However, if we want to display the image on the web using IIIF, we can use the Image API to request/display a specific region or area of the image, without needing to save the result as a new image or overwriting the original.</p>
 
 <p>As an example, we'll use the following <a href="https://exhibits.library.uvic.ca/spotlight/library-publications/catalog/9-14462" target="_blank">image of Robin Hopper's nickel glaze tests</a>, which is featured in UVic's Spotlight exhibit, <em><a href="https://exhibits.library.uvic.ca/spotlight/library-publications" target="_blank">University of Victoria Libraries Publication Series</a></em>.</p>
 
