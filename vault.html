@@ -4,30 +4,32 @@ title: Vault IIIF Examples
 permalink: /vault
 description: Examples using items from vault.library.uvic.ca
 ---
-<!DOCTYPE html>
-<html>
-<head>
-    <meta charset="utf-8">
-    <title>Vault IIIF Examples</title>
-</head>
-<body>
+<h1>Find a Manifest for a Work</h1>
 
-    <h1>Find a Manifest for a Work</h1>
+<ol>
+    <li>If using Chrome, download the <a href="https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">JSON Formatter extension</a>. (It makes reading and copying JSON much easier.)</li>
+    <li>Go to any image work's page (<a href="https://vault.library.uvic.ca/concern/generic_works/4ca5b526-94b8-496b-bc70-05d4b1c83d6e" target="_blank">example</a> from the John Betjman collection).</li>
+    <img class="screenshot" src="assets/images/vault_work_example.jpg" alt="A screenshot of the example Vault work page, which includes a navigation bar and an image viewer." />
+    <li>Add <strong>/manifest.json</strong> on the end and hit Enter. This will bring you to the manifest
+        for that work (<a href="https://vault.library.uvic.ca/concern/generic_works/4ca5b526-94b8-496b-bc70-05d4b1c83d6e/manifest.json" target="_blank">example</a>).</li>
+</ol>
 
-    <ol>
-        <li>If using Chrome, download the <a href="https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">JSON Formatter extension</a>. (It makes reading and copying JSON much easier.)</li>
-        <li>Go to any image work's page (<a href="https://vault.library.uvic.ca/concern/generic_works/4ca5b526-94b8-496b-bc70-05d4b1c83d6e" target="_blank">example</a> from the John Betjman collection).</li>
-        <img class="screenshot" src="assets/images/vault_work_example.jpg" alt="A screenshot of the example Vault work page, which includes a navigation bar and an image viewer." />
-        <li>Add <strong>/manifest.json</strong> on the end and hit Enter. This will bring you to the manifest for that work (<a href="https://vault.library.uvic.ca/concern/generic_works/4ca5b526-94b8-496b-bc70-05d4b1c83d6e/manifest.json" target="_blank">example</a>).</li>
-    </ol>
+<h1>Images of a Specific Size or Region</h1>
 
-    <h1>Images of a Specific Size or Region</h1>
+<p>For instructions and examples of how to request images using IIIF, see the <a href="/image-api">Image API page</a>.</p>
 
-    <p>For instructions and examples of how to request images using IIIF, see the <a href="/image-api">Image API page</a>.</p>
+<h1>Use a Manifest with Your Own Viewer</h1>
 
-    <h1>Use a Manifest with Your Own Viewer</h1>
+The following embedded <a href="https://projectmirador.org/" target="_blank">Mirador viewer</a> uses a manifest from Vault. Click the menu symbol (3 lines) to see the manifest metadata.
 
-    <h1>Use Custom Metadata with a Vault Image</h1>
+<iframe class="mirador-iframe" title="Mirador Example 1" src="/mirador?manifesturl=https://vault.library.uvic.ca/concern/generic_works/fb46f8fc-25e8-45e7-b089-21639a363b53/manifest.json"
+        allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
 
-</body>
-</html>
+<div class="mirador-example-links">
+    <a href="https://vault.library.uvic.ca/concern/generic_works/fb46f8fc-25e8-45e7-b089-21639a363b53/manifest.json" target="_blank" >Manifest for this example</a> |
+    <a href="codepen.io/eltiffster/pen/YzbeBeM" target="_blank">Code example on CodePen</a> |
+    <a href="" target="_blank">Embed code example on CodePen</a>
+</div>
+
+<h1>Use Custom Metadata with a Vault Image</h1>
