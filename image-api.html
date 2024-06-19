@@ -3,7 +3,7 @@ layout: default
 title: Image API
 description: Requesting & displaying images using the IIIF Image API
 ---
-<h1><a name="size">Resizing images using IIIF</a></h1>
+<h1><a name="size">"Resizing" images using IIIF</a></h1>
 <p>To resize a web image without IIIF, we would need to download the file and open it in a separate software program, such as Adobe Photoshop or Microsoft Paint, then resize it and save the resulting image as a separate file. However, if we want to display the image on the web using IIIF, we don't need to create a separate derivative file. Instead, we can request the size we want using the <a href="https://iiif.io/api/image/2.1/" target="_blank">IIIF Image API</a>, and the image server will respond with the resized image.</p>
 
 <p>The steps for manually requesting a resized image (given the IIIF manifest) are listed below. Although we use Vault as an example, the same instructions will work for any manifest that is backed by a IIIF image server and is level 1 or level 2 compliant (<a href="https://iiif.io/api/image/3.0/compliance/" target="_blank">more on levels of Image API compliance</a>).</p>
