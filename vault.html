@@ -33,3 +33,35 @@ description: Examples using items from vault.library.uvic.ca
 </div>
 
 <h1>Use Custom Metadata with a Vault Image</h1>
+
+<p>
+    By editing a manifest for a Vault image and passing our new manifest's URL to a IIIF viewer,
+    we can attach custom metadata to a Vault image. To do this, we create a self-hosted copy of the
+    manifest and edit the "metadata" section and leave the rest of the manifest untouched.
+</p>
+
+<code>
+    {
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@type": "sc:Manifest",
+    "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest",
+    "label": "Edited title", # Replace Edited title with a new title
+    "description": [
+        "Edited description." # Replace Edited description with a new description
+    ],
+    "metadata": [
+        # Edit the fields in here
+    ],
+    ...
+    # The rest of the manifest stays the same
+</code>
+
+<p>The embedded viewer below uses an example of a customized Vault manifest, which is linked below.</p>
+
+<iframe class="mirador-iframe" title="Vault Mirador Example 1" src="https://uviclibrary.github.io/IIIFDemo/mirador?manifesturl=https://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json"
+        allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
+
+<div class="mirador-example-links">
+    <a href="hhttps://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json" target="_blank" >Manifest for this example</a>
+</div>

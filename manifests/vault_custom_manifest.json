@@ -1,0 +1,70 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "sc:Manifest",
+  "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest",
+  "label": "Image with Custom Metadata",
+  "description": [
+    "An example of how to edit a manifest's metadata and display it in a IIIF viewer."
+  ],
+  "metadata": [
+    {
+      "label": "Custom field 1",
+      "value": "Some custom metadata"
+    },
+    {
+      "label": "Custom field 2",
+      "value": "Moar metadata"
+    },
+    {
+      "label": "Custom field 3",
+      "value": "Even moar metadata"
+    }
+  ],
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest/sequence/normal",
+      "rendering": [
+        null
+      ],
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest/canvas/047d55cb-c9b1-44cf-8c3e-8cc2bec7eb16",
+          "label": "SC606_EJHughes_2020_043_1_09",
+          "width": 1212,
+          "height": 1896,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "dctypes:Image",
+                "@id": "https://vault.library.uvic.ca/downloads/047d55cb-c9b1-44cf-8c3e-8cc2bec7eb16",
+                "height": 1896,
+                "width": 1212,
+                "format": "jpg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://vault.library.uvic.ca/images/047d55cb-c9b1-44cf-8c3e-8cc2bec7eb16%2Ffiles%2F46c59df7-c99f-4f19-bd1b-7e56a057eec8",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                },
+                "label": "SC606_EJHughes_2020_043_1_09",
+                "description": null,
+                "metadata": [
+                  {
+                    "Creator label": "Hughes, E. J. (Edward John), 1913-2007"
+                  },
+                  {
+                    "Creator": "http://id.worldcat.org/fast/1753849"
+                  }
+                ]
+              },
+              "on": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest/canvas/047d55cb-c9b1-44cf-8c3e-8cc2bec7eb16"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
