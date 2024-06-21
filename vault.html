@@ -20,7 +20,8 @@ description: Examples using items from vault.library.uvic.ca
 
 <h1>Use a Manifest with Your Own Viewer</h1>
 
-<p>The following embedded <a href="https://projectmirador.org/" target="_blank">Mirador viewer</a> uses a manifest from Vault. Click the menu symbol (3 lines) to see the manifest metadata.</p>
+<p>The following embedded <a href="https://projectmirador.org/" target="_blank">Mirador viewer</a> uses a manifest from Vault.
+    Click the menu symbol (3 lines) to see the manifest metadata.</p>
 
 <iframe class="mirador-iframe" title="Vault Mirador Example 1" src="https://uviclibrary.github.io/IIIFDemo/mirador?manifesturl=https://vault.library.uvic.ca/concern/generic_works/fb46f8fc-25e8-45e7-b089-21639a363b53/manifest.json"
         allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
@@ -40,7 +41,9 @@ description: Examples using items from vault.library.uvic.ca
     manifest and edit the "metadata" section and leave the rest of the manifest untouched.
 </p>
 
-<code>
+<figure>
+    <div class="highlight">
+            <pre class="highlight">
     {
     "@context": "http://iiif.io/api/presentation/2/context.json",
     "@type": "sc:Manifest",
@@ -54,14 +57,19 @@ description: Examples using items from vault.library.uvic.ca
     ],
     ...
     # The rest of the manifest stays the same
-</code>
+            </pre>
+    </div>
+</figure>
 
-<p>The embedded viewer below uses an example of a customized Vault manifest, which is linked below.</p>
+<p>
+    The embedded viewer below uses an example of a customized Vault manifest, which is linked below.
+    Click the menu symbol (3 lines) to see the manifest metadata.
+</p>
 
 <iframe class="mirador-iframe" title="Vault Mirador Example 1" src="https://uviclibrary.github.io/IIIFDemo/mirador?manifesturl=https://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json"
         allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
 </iframe>
 
 <div class="mirador-example-links">
-    <a href="hhttps://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json" target="_blank" >Manifest for this example</a>
+    <a href="https://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json" target="_blank" >Manifest for this example</a>
 </div>
