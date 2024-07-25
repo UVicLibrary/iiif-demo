@@ -1,8 +1,8 @@
 {
   "@context": "http://iiif.io/api/presentation/2/context.json",
   "@type": "sc:Manifest",
-  "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest",
-  "label": "Image with Custom Metadata",
+  "@id": "https://uviclibrary.github.io/IIIFDemo/manifests/vault_custom_manifest.json",
+  "label": "Vault Image with Custom Metadata",
   "description": [
     "An example of how to edit a manifest's metadata and display it in a IIIF viewer."
   ],

@@ -1,0 +1,60 @@
+{
+  "@context": "http://iiif.io/api/presentation/2/context.json",
+  "@type": "sc:Manifest",
+  "@id": "https://uviclibrary.github.io/IIIFDemo/manifests/spotlight_custom_manifest.json",
+  "label": "Spotlight Image with Custom Metadata",
+  "description": [
+    "An example of how to edit a manifest's metadata and display it in a IIIF viewer."
+  ],
+  "metadata": [
+    {
+      "label": "Custom field 1",
+      "value": "Some custom metadata"
+    },
+    {
+      "label": "Custom field 2",
+      "value": "Moar metadata"
+    },
+    {
+      "label": "Custom field 3",
+      "value": "Even moar metadata"
+    }
+  ],
+  "sequences": [
+    {
+      "@type": "sc:Sequence",
+      "@id": "https://vault.library.uvic.ca/concern/generic_works/8cadb71a-b05e-4cb0-bae7-8ed0df4a4302/manifest/sequence/normal",
+      "rendering": [
+        null
+      ],
+      "canvases": [
+        {
+          "@type": "sc:Canvas",
+          "@id": "https://exhibits.library.uvic.ca/spotlight/ian-mctaggart-cowan/catalog/4-12027/manifest/canvas/4-12027",
+          "label": "Coyote pup",
+          "width": 877,
+          "height": 540,
+          "images": [
+            {
+              "@type": "oa:Annotation",
+              "motivation": "sc:painting",
+              "resource": {
+                "@type": "dctypes:Image",
+                "@id": "4-12027",
+                "height": 540,
+                "width": 877,
+                "format": "image/jpeg",
+                "service": {
+                  "@context": "http://iiif.io/api/image/2/context.json",
+                  "@id": "https://exhibits.library.uvic.ca/images/12398-00a30395268f1ee0110800897794697a",
+                  "profile": "http://iiif.io/api/image/2/level2.json"
+                }
+              },
+              "on": "https://exhibits.library.uvic.ca/spotlight/ian-mctaggart-cowan/catalog/4-12027/manifest/canvas/4-12027"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

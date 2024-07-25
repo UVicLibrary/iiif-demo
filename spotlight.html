@@ -30,3 +30,49 @@ description: Examples using items from exhibits.library.uvic.ca
 </div>
 
 <h1>Using Custom Metadata with a Spotlight Manifest</h1>
+
+<p>
+    By editing a manifest for a Spotlight image and passing our new manifest's URL to a IIIF viewer,
+    we can attach custom metadata to that image. To do this, we create a self-hosted copy of the
+    manifest and edit the "metadata" section and leave the rest of the manifest untouched.
+</p>
+
+<figure>
+    <div class="highlight">
+            <pre class="highlight">
+    {
+    "@context": "http://iiif.io/api/presentation/2/context.json",
+    "@type": "sc:Manifest",
+    "@id": "https://uviclibrary.github.io/IIIFDemo/manifests/spotlight_custom_manifest.json",
+    "label": "Edited title", # Replace Edited title with a new title
+    "description": [
+        "Edited description." # Replace Edited description with a new description
+    ],
+    "metadata": [
+        # Edit the fields in here
+    ],
+    ...
+    # The rest of the manifest stays the same
+            </pre>
+    </div>
+</figure>
+
+<p>
+    Note that we also change the <code>@id</code> element to be the URL to our customized
+    manifest instead of the manifest hosted on Spotlight, which aligns with the
+    <a href="https://iiif.io/api/presentation/2.0/#technical-properties" target="_blank">
+    IIIF documentation on the ID property</a>.
+</p>
+
+<p>
+    The embedded viewer below uses an example of a customized Vault manifest, which is linked below.
+    Click the menu symbol (3 lines) to see the manifest metadata.
+</p>
+
+<iframe class="mirador-iframe" src="https://uviclibrary.github.io/IIIFDemo/mirador?manifesturl=https://uviclibrary.github.io/IIIFDemo/manifests/spotlight_custom_manifest.json"
+        allowfullscreen="true" webkitallowfullscreen="true" mozallowfullscreen="true">
+</iframe>
+
+<div class="mirador-example-links">
+    <a href="https://uviclibrary.github.io/IIIFDemo/manifests/spotlight_custom_manifest.json" target="_blank" >Manifest for this example</a>
+</div>
