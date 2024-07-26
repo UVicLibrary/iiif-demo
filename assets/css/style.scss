@@ -75,10 +75,12 @@ div.highlight {
 div.flex-container {
   display: flex;
   justify-content: space-between;
+  align-items: end;
 }
 
 div.flex-box {
-  margin-top: auto;
+  //margin-top: auto;
+  margin: 0.5rem;
 }
 
 span.image-request {
@@ -124,9 +126,8 @@ img.region-example {
 }
 
 .inner {
-  width: 750px;
   margin: auto auto;
-  padding: 1rem;
+  padding: 2rem 0 2rem 0;
 }
 
 .mirador-iframe {
@@ -172,7 +173,7 @@ nav ul li a:hover {
 /*
   Extra small devices (phones, 600px and down)
 */
-@media only screen and (max-width: 600px) {
+@media only screen and (max-width: 675px) {
   nav {
     flex-direction: column;
   }
@@ -182,5 +183,12 @@ nav ul li a:hover {
   }
   nav li {
     padding: 0.5rem 0;
+  }
+  .flex-container {
+    flex-direction: column;
+    align-items: center !important;
+  }
+  ol {
+    margin-left: 0.5rem;
   }
 }
