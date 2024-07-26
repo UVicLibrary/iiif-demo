@@ -18,7 +18,7 @@
 # You can create any custom variable you would like, and they will be accessible
 # in the templates via {{ site.myvariable }}.
 
-title: UVic Libraries IIIF Demo
+title: UVic Libraries - IIIF by Example
 #email: tjychan@uvic.ca
 description: # >- this means to ignore newlines until "baseurl:"
 baseurl: # the subpath of your site, e.g. /blog
