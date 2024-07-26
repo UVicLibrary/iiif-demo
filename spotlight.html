@@ -3,7 +3,16 @@ layout: default
 title: Spotlight IIIF Examples
 description: Examples using items from exhibits.library.uvic.ca
 ---
-<h1>Find a Manifest for an Item</h1>
+<h1>Examples on this Page</h1>
+
+<ul class="quicklinks">
+    <li><a href="#spotlight-find-a-manifest">Find a Manifest for an Item</a></li>
+    <li><a href="#spotlight-specific-size-or-region">Images of a Specific Size or Region</a></li>
+    <li><a href="#spotlight-use-a-manifest">Use a Manifest with Your Own Viewer</a></li>
+    <li><a href="#spotlight-use-custom-metadata">Use Custom Metadata with a Spotlight Manifest</a></li>
+</ul>
+
+<h1><a name="spotlight-find-a-manifest">Find a Manifest for an Item</a></h1>
 
 <ol>
     <li>If using Chrome, download the <a href="https://chromewebstore.google.com/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa" target="_blank">JSON Formatter extension</a>. (It makes reading and copying JSON much easier.)</li>
@@ -11,11 +20,11 @@ description: Examples using items from exhibits.library.uvic.ca
     <img class="screenshot" src="assets/images/spotlight_work_example.jpg" alt="A screenshot of the example Spotlight catalog page, which includes a navigation bar and an image viewer." />
     <li>Add <strong>/manifest.json</strong> on the end and hit Enter. This will bring you to the manifest for that work (<a href="https://exhibits.library.uvic.ca/spotlight/ian-mctaggart-cowan/catalog/4-11997/manifest.json" target="_blank">example</a>).</li>
 </ol>
-<h1>Images of a Specific Size or Region</h1>
+<h1><a name="spotlight-specific-size-or-region">Images of a Specific Size or Region</a></h1>
 
 <p>For instructions and examples of how to request images using IIIF, see the <a href="/image-api">Image API page</a>.</p>
 
-<h1>Use a Manifest with Your Own Viewer</h1>
+<h1><a name="spotlight-use-a-manifest">Use a Manifest with Your Own Viewer</a></h1>
 
 <p>The following embedded <a href="https://projectmirador.org/" target="_blank">Mirador viewer</a> uses a manifest from Spotlight. Click the menu symbol (3 lines) to see the manifest metadata.</p>
 
@@ -26,10 +35,10 @@ description: Examples using items from exhibits.library.uvic.ca
 <div class="mirador-example-links">
     <a href="https://exhibits.library.uvic.ca/spotlight/mcm/catalog/10-12641/manifest.json" target="_blank" >Manifest for this example</a> |
     <a href="https://codepen.io/eltiffster/pen/bGyvWGP" target="_blank">Code example on CodePen</a> |
-    <a href="https://codepen.io/eltiffster/pen/bGyvWGP" target="_blank">Embed code example on CodePen</a>
+    <a href="https://codepen.io/eltiffster/pen/bGyvWGP" target="_blank">Embedded code example on CodePen</a>
 </div>
 
-<h1>Using Custom Metadata with a Spotlight Manifest</h1>
+<h1><a name="spotlight-use-custom-metadata">Use Custom Metadata with a Spotlight Manifest</a></h1>
 
 <p>
     By editing a manifest for a Spotlight image and passing our new manifest's URL to a IIIF viewer,
