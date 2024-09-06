@@ -1,14 +1,14 @@
 pages_list_title: Pages on this website
 pages:
   - title: About
-    url: index.html
+    url: index
   - title: Glossary
-    url: index.html#glossary
+    url: index#glossary
   - title: Vault
-    url: vault.html
+    url: vault
   - title: Spotlight
-    url: spotlight.html
+    url: spotlight
   - title: Image API
-    url: image-api.html
+    url: image-api
 #  - title: Image URL Generator
-#    url: generator.html
+#    url: generator
